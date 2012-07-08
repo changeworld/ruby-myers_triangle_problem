@@ -2,7 +2,8 @@ class Triangle
   attr_accessor :a, :b, :c
 
   def is_triangle?
-    @a > 0 && @b > 0 && @c > 0
+    @a != nil && @b != nil && @c != nil &&
+      @a > 0 && @b > 0 && @c > 0
   end
 
   def is_equilteral_triangle?
