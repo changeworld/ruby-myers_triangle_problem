@@ -5,4 +5,8 @@ class Triangle
     @a > 0 && @b > 0 && @c > 0 &&
       @a == @b && @b == @c && @c == @a
   end
+
+  def is_isoscales_triangle?
+    true
+  end
 end
