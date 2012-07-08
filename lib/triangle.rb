@@ -1,10 +1,14 @@
 class Triangle
   attr_accessor :a, :b, :c
 
-  def is_triangle?
+  def satisfy_precondition?
     @a != nil && @b != nil && @c != nil &&
-      @a > 0 && @b > 0 && @c > 0 &&
-      (@a < @b + @c && @b < @a + @c && @c < @a + @c)
+      @a > 0 && @b > 0 && @c > 0
+  end
+
+  def is_triangle?
+    satisfy_precondition? &&
+      @a < @b + @c && @b < @a + @c && @c < @a + @c
   end
 
   def is_equilteral_triangle?
