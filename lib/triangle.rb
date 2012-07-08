@@ -8,7 +8,7 @@ class Triangle
 
   def is_triangle?
     is_precondition? &&
-      @a < @b + @c && @b < @a + @c && @c < @a + @c
+      @a < @b + @c && @b < @a + @c && @c < @a + @b
   end
 
   def is_equilteral_triangle?
