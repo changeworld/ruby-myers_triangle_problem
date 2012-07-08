@@ -3,7 +3,8 @@ class Triangle
 
   def is_triangle?
     @a != nil && @b != nil && @c != nil &&
-      @a > 0 && @b > 0 && @c > 0
+      @a > 0 && @b > 0 && @c > 0 &&
+      (@a < @b + @c && @b < @a + @c && @c < @a + @c)
   end
 
   def is_equilteral_triangle?
