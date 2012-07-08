@@ -22,6 +22,7 @@ class Triangle
   end
 
   def is_scalene_triangle?
-    true
+    is_triangle? &&
+      !is_isoscales_triangle?
   end
 end
