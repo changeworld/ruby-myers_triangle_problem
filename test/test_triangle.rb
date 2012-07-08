@@ -29,9 +29,17 @@ class TestTriangle < Test::Unit::TestCase
     assert @triangle.is_isoscales_triangle?, 'should be passed.'
   end
 
-  def test_is_triangle
+  def test_is_triangle_nil
     @triangle = Triangle.new
     @triangle.a = nil
+    @triangle.b = 1
+    @triangle.c = 1
+    assert !@triangle.is_triangle?, 'not triangle!'
+  end
+
+  def test_not_triangle_2_1_1
+    @triangle = Triangle.new
+    @triangle.a = 2
     @triangle.b = 1
     @triangle.c = 1
     assert !@triangle.is_triangle?, 'not triangle!'
