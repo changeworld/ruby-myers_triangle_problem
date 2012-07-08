@@ -17,4 +17,12 @@ class TestTriangle < Test::Unit::TestCase
     @triangle.c = 0
     assert !@triangle.is_equilteral_triangle?, 'not triangle!'
   end
+
+  def test_is_isoscales_triangle
+    @triangle = Triangle.new
+    @triangle.a = 1
+    @triangle.b = 2
+    @triangle.c = 2
+    assert @triangle.is_isoscales_triangle?, 'should be passed.'
+  end
 end
