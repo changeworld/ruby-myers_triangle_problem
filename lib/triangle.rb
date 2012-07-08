@@ -7,6 +7,7 @@ class Triangle
   end
 
   def is_isoscales_triangle?
-    true
+    @a > 0 && @b > 0 && @c > 0 &&
+      (@a == @b || @b == @c || @c == @a)
   end
 end
