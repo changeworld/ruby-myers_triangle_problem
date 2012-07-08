@@ -9,6 +9,7 @@ class TestTriangle < Test::Unit::TestCase
     @triangle.c = 1
     assert @triangle.is_equilteral_triangle?, 'should be passed.'
     assert @triangle.is_isoscales_triangle?, 'should be passed.'
+    assert !@triangle.is_scalene_triangle?, 'not scalene triangle!'
   end
 
   def test_not_triangle_0_0_0
@@ -18,6 +19,7 @@ class TestTriangle < Test::Unit::TestCase
     @triangle.c = 0
     assert !@triangle.is_equilteral_triangle?, 'not triangle!'
     assert !@triangle.is_isoscales_triangle?, 'not triangle!'
+    assert !@triangle.is_scalene_triangle?, 'not triangle!'
   end
 
   def test_is_isoscales_triangle
@@ -27,6 +29,7 @@ class TestTriangle < Test::Unit::TestCase
     @triangle.c = 2
     assert !@triangle.is_equilteral_triangle?, 'not equilteral triangle!'
     assert @triangle.is_isoscales_triangle?, 'should be passed.'
+    assert !@triangle.is_scalene_triangle?, 'not scalene triangle!'
   end
 
   def test_not_triangle_nil_1_1
@@ -50,6 +53,8 @@ class TestTriangle < Test::Unit::TestCase
     @triangle.a = 5
     @triangle.b = 4
     @triangle.c = 3
+    assert !@triangle.is_equilteral_triangle?, 'not equilteral triangle!'
+    assert !@triangle.is_isoscales_triangle?, 'not isoscales triangle!'
     assert @triangle.is_scalene_triangle?, 'should be passed.'
   end
 end
