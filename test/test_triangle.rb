@@ -1,7 +1,5 @@
-$:.unshift File.join(File.dirname(__FILE__),'..','lib')
-
 require 'test/unit'
-require 'triangle'
+require './lib/triangle'
 
 class TestTriangle < Test::Unit::TestCase
   def setup
