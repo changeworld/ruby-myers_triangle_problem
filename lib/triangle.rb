@@ -2,7 +2,7 @@ class Triangle
   attr_accessor :a, :b, :c
 
   def is_precondition?
-    @a != nil && @b != nil && @c != nil &&
+    (!(@a.nil? || @b.nil? || @c.nil?)) &&
       @a > 0 && @b > 0 && @c > 0
   end
 
