@@ -1,8 +1,12 @@
 class Triangle
   attr_accessor :a, :b, :c
 
+  def not_nil?
+    !(@a.nil? || @b.nil? || @c.nil?)
+  end
+
   def is_precondition?
-    (!(@a.nil? || @b.nil? || @c.nil?)) &&
+    not_nil? &&
       @a > 0 && @b > 0 && @c > 0
   end
 
